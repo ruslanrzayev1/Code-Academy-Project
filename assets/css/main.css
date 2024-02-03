@@ -1,0 +1,91 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Nunito;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+footer .footer-content-1 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 65%;
+  min-height: 260px;
+}
+footer .footer-content-1 .footer-links-1,
+footer .footer-content-1 .footer-links-2,
+footer .footer-content-1 .footer-links-3,
+footer .footer-content-1 .footer-links-4 {
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+  width: 25%;
+  margin-top: 20px;
+}
+footer .footer-content-1 .footer-links-1 li,
+footer .footer-content-1 .footer-links-2 li,
+footer .footer-content-1 .footer-links-3 li,
+footer .footer-content-1 .footer-links-4 li {
+  margin: 0 10px;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+}
+footer .footer-content-1 .footer-links-1 li a,
+footer .footer-content-1 .footer-links-2 li a,
+footer .footer-content-1 .footer-links-3 li a,
+footer .footer-content-1 .footer-links-4 li a {
+  color: #c0c0c0;
+  text-decoration: none;
+  font-weight: 400;
+  line-height: 25px;
+  font-size: 16px;
+  transition: 0.4s;
+}
+footer .footer-content-1 .footer-links-1 li a:hover,
+footer .footer-content-1 .footer-links-2 li a:hover,
+footer .footer-content-1 .footer-links-3 li a:hover,
+footer .footer-content-1 .footer-links-4 li a:hover {
+  transition: 0.4s;
+  color: white;
+}
+footer .footer-social {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid rgba(128, 128, 128, 0.397);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.397);
+  width: 100%;
+  min-height: 80px;
+  align-items: center;
+  gap: 25px;
+}
+footer .footer-social a i {
+  color: #c0c0c0;
+  transition: 0.4s;
+  font-size: 18px;
+}
+footer .footer-social a i:hover {
+  transition: 0.4s;
+  color: white;
+}
+footer p {
+  min-height: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  footer .footer-content-1 .footer-links-1,
+  footer .footer-content-1 .footer-links-2,
+  footer .footer-content-1 .footer-links-3,
+  footer .footer-content-1 .footer-links-4 {
+    width: 100%;
+  }
+}
