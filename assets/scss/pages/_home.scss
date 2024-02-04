@@ -5,6 +5,148 @@
   font-family: Nunito;
 }
 
+header {
+  color: #666;
+  width: 100%;
+  min-height: 82px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .header-container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    .site-logo {
+      text-decoration: none;
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 172px;
+      img {
+        width: 60%;
+      }
+    }
+    .nav-container {
+      display: flex;
+      width: 85%;
+      min-height: 82px;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid rgba(128, 128, 128, 0.185);
+      nav {
+        width: 60%;
+        ul {
+          list-style: none;
+          display: flex;
+          width: 100%;
+          li {
+            a {
+              color: #333;
+              text-decoration: none;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 10px;
+              transition: 0.3s;
+              padding: 5px;
+              i {
+                font-size: 10px;
+                color: #007bff;
+              }
+              &:hover {
+                color: white;
+                transition: 0.3s;
+                background-color: #007bff;
+                i {
+                  color: white;
+                }
+              }
+            }
+            &.dropdown {
+              position: relative;
+
+              ul.dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #fff;
+                padding: 15px;
+                width: 120%;
+                list-style: none;
+                box-shadow: 0 0 10px #00000028;
+                border-radius: 5px;
+
+                li {
+                  a {
+                    color: #666;
+                    text-decoration: none;
+                    transition: 0.3s;
+                    display: flex;
+                    justify-content: start;
+                    &:hover {
+                      transition: 0.3s;
+                      background-color: white;
+                      color: #007bff;
+                    }
+                  }
+                }
+              }
+
+              &:hover {
+                ul.dropdown-content {
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+        .burger {
+          display: none;
+          flex-direction: column;
+          cursor: pointer;
+          background-color: #009900;
+          border-radius: 5px;
+          i {
+            font-size: 30px;
+            padding: 10px;
+            color: white;
+          }
+        }
+      }
+      .create-vacancy {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 14%;
+        a {
+          text-decoration: none;
+          color: #666;
+          background-color: #eff1f2;
+          padding: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 255, 0.144);
+          transition: 0.3s;
+          border-radius: 5px;
+          &:hover {
+            color: white;
+            background-color: #0017a7;
+            transition: 0.3s;
+          }
+        }
+      }
+    }
+    .user-avatar {
+      width: 6%;
+      display: flex;
+      justify-content: center;
+      img {
+        width: 35%;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
 footer {
   background-color: #333;
   color: #fff;
