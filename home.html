@@ -40,50 +40,128 @@
   </head>
   <body>
     <header>
-      <div class="header-container">
-        <a href="./home.html" class="site-logo">
-          <img
-            src="./assets/images/OgQWs1lHRAONazsERFcm7OY4I1pksVYsEaQxFcIl.webp"
-            alt=""
-          />
-        </a>
-        <div class="nav-container">
-          <nav>
-            <ul>
-              <li style="width: 14%;"><a href="#">Vakansiyalar</a></li>
-              <li style="width: 12%;"><a href="#">Məqalələr</a></li>
-              <li class="dropdown" style="width: 19%;">
-                <a href="#" 
-                  >İşaxtaranlar üçün
-                  <i class="fa-sharp fa-solid fa-caret-down"></i
-                ></a>
+      <nav class="navbar navbar-expand-lg nav-bar">
+        <div class="container-fluid navbar-container">
+          <a class="navbar-brand site-logo" href="#"
+            ><img
+              src="./assets/images/OgQWs1lHRAONazsERFcm7OY4I1pksVYsEaQxFcIl.webp"
+              alt=""
+            />
+          </a>
+
+          <div
+            class="collapse navbar-collapse nav-items-container"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav nav-items">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  style="
+                    width: 120px;
+                    height: 37px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                  aria-current="page"
+                  href="#"
+                  >Vakansiyalar
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  style="
+                    width: 102px;
+                    height: 37px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                  aria-current="page"
+                  href="#"
+                  >Məqalələr</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link active"
+                  style="
+                    width: 177px;
+                    height: 37px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                  aria-current="page"
+                  href="#"
+                >
+                  İşaxtaranlar üçün<i
+                    class="fa-sharp fa-solid fa-caret-down"
+                  ></i>
+                </a>
                 <ul class="dropdown-content">
                   <li><a href="#">Ətraflı axtarış</a></li>
                   <li><a href="#">Şirkətlər</a></li>
                   <li><a href="#">İxtisaslar</a></li>
                 </ul>
               </li>
-              <li class="dropdown" style="width: 19%;">
-                <a href="#"
-                  >İşəgötürənlər üçün
-                  <i class="fa-sharp fa-solid fa-caret-down"></i
-                ></a>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link active"
+                  style="
+                    width: 187px;
+                    height: 37px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                  aria-current="page"
+                  href="#"
+                  >İşəgötürənlər üçün<i
+                    class="fa-sharp fa-solid fa-caret-down"
+                  ></i>
+                </a>
                 <ul class="dropdown-content">
                   <li><a href="#">Qiymətlər</a></li>
                   <li><a href="#">Headhunting</a></li>
                   <li><a href="#">CV-lər</a></li>
                 </ul>
               </li>
-              <li style="width: 13%;"><a href="#">Haqqımızda</a></li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  style="
+                    width: 115px;
+                    height: 37px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                  aria-current="page"
+                  href="#"
+                  >Haqqımızda</a
+                >
+              </li>
             </ul>
-            <div class="burger" onclick="toggleMenu()">
-              <i class="fa-regular fa-bars"></i>
-            </div>
-          </nav>
-          <div class="create-vacancy"><a href="#">+ Vakansiya yarat</a></div>
+          </div>
+          <div class="vacancy-create"><a href="#">+ Vakansiya yarat</a></div>
+          <a href="#" class="header-user"
+            ><img src="./assets/images/user-avatar-placeholder.png" alt="" /></a
+          ><button
+            class="navbar-toggler hamburger-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
         </div>
-        <a href="#" class="user-avatar"><img src="./assets/images/user-avatar-placeholder.png" alt=""></a>
-      </div>
+      </nav>
     </header>
     <footer>
       <div class="footer-content-1">
@@ -134,6 +212,7 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"
       ></script>
+      <script src="./assets/js/home.js"></script>
     </footer>
   </body>
 </html>
