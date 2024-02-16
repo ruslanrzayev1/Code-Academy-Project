@@ -168,27 +168,10 @@
     </header>
     <main>
       <section id="search-and-filter">
+        <h2>Ətraflı axtarış</h2>
         <div class="container">
-          <h1>Bizi işlə dost edir</h1>
-          <h2>Azərbaycanın #1 iş axtarma saytı</h2>
-          <button>istədiyin işin adını axtarışa ver</button>
-          <div class="search-inp-and-btn">
-            <input
-              type="text"
-              placeholder="vakansiyanın adı yaxud açar-söz
-            "
-              id="searchinp-for-home"
-              onmousedown="changeInpColor()"
-            /><button onclick="redirectToResults()" id="searchbtn-for-home">
-              axtar
-            </button>
-          </div>
-          <button id="sort-for-job" onclick="toggleDiv()">
-            <i class="fa-solid fa-magnifying-glass"></i> Ətraflı axtarış
-            <i class="fa-solid fa-sort-down"></i>
-          </button>
           <div class="filter-for-data">
-            <form id="jobFilterForm" class="hidden">
+            <form id="jobFilterForm" class="jobFilterFormForAdvanced">
               <div class="row">
                 <div class="col-4">
                   <div class="category">
@@ -277,7 +260,7 @@
                   <div class="skills">
                     <label for="skills">İxtisaslar</label>
                     <select id="skills">
-                      <option value="secilmeyib">job 1</option>
+                      <option value="secilmeyib">Seçilməyib</option>
                       <option value="konstruktor"></option>
                       <option value="konstruktor">Konstruktor</option>
                       <option value="brandManagementSpecialist">
@@ -661,7 +644,7 @@
                 </div>
                 <div class="col-12">
                   <div class="send-btn">
-                    <button type="button" id="sendButton">Göndər</button>
+                    <button type="button" onclick="getJobs()">Göndər</button>
                   </div>
                 </div>
               </div>
@@ -669,39 +652,6 @@
           </div>
         </div>
       </section>
-      <section id="vacancies-cnt">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <div class="sort-jobs">
-                <div class="sort-btn-cnt">
-                  <button id="recentVacanciesButton">Son vakansiyalar</button>
-                  <button id="premiumButton">Premium</button>
-                  <button id="highSalaryButton">Yüksək maaşlı</button>
-                  <button id="volunteerButton">Könüllü (volontyor)</button>
-                </div>
-              </div>
-            </div>
-            <div class="col-12"><div class="row all-vacancies-cnt"></div></div>
-          </div>
-        </div>
-      </section>
-      <section id="telegram-bot">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <div class="vaxt-itirme">
-                <h1>İş axtarışlarına vaxt itirmə!</h1>
-                <h2>Telegram bot-a abunə ol, həyatını asanlaşdır!</h2>
-                <p>Sən işi yox, iş səni səni tapsın!</p>
-                <p>Məhz özünə uyğun vakansiyaları seç!</p>
-                <button>Abunə ol</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="headhunt-service"></section>
     </main>
     <footer>
       <div class="footer-content-1">
@@ -752,7 +702,7 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"
       ></script>
-      <script src="./assets/js/home.js"></script>
+      <script src="./assets/js/advanced.js"></script>
     </footer>
   </body>
 </html>

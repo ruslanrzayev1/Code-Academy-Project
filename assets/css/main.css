@@ -10,6 +10,7 @@ header {
   min-height: 82px;
   display: flex;
   align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1568627451);
 }
 header .nav-bar {
   width: 100%;
@@ -105,13 +106,292 @@ header .nav-bar .navbar-container .header-user {
   align-items: center;
   border-left: 1px solid rgba(128, 128, 128, 0.233);
   min-height: 82px;
+  position: relative;
 }
 header .nav-bar .navbar-container .header-user img {
   width: 43px;
   border-radius: 50%;
 }
+header .nav-bar .navbar-container .header-user .logout-option {
+  display: none;
+}
+header .nav-bar .navbar-container .header-user:hover .logout-option {
+  display: block;
+  position: absolute;
+  bottom: -50px;
+  width: 100px;
+  min-height: 60px;
+  display: flex;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1568627451);
+}
+header .nav-bar .navbar-container .header-user:hover .logout-option a {
+  text-decoration: none;
+  color: black;
+}
 header .nav-bar .navbar-container .hamburger-button {
   background-color: #eff1f2;
+}
+
+#search-and-filter {
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+#search-and-filter .container h1 {
+  font-size: 28px;
+  font-weight: 600;
+}
+#search-and-filter .container h2 {
+  font-size: 28px;
+  font-weight: 300;
+}
+#search-and-filter .container button {
+  font-weight: 400;
+  background-color: #0014a7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  min-height: 30px;
+  width: 230px;
+  cursor: auto;
+}
+#search-and-filter .container .search-inp-and-btn {
+  width: 95%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1568627451);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  min-height: 70px;
+  border-radius: 5px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+#search-and-filter .container .search-inp-and-btn #searchinp-for-home {
+  width: 90%;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+#search-and-filter .container .search-inp-and-btn #searchinp-for-home:focus {
+  outline: none;
+}
+#search-and-filter .container .search-inp-and-btn #searchinp-for-home::placeholder {
+  padding-left: 10px;
+  color: white;
+}
+#search-and-filter .container .search-inp-and-btn #searchbtn-for-home {
+  width: 9%;
+  cursor: pointer;
+}
+#search-and-filter .container #sort-for-job {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  background-color: white !important;
+  color: black;
+  gap: 5px;
+  cursor: pointer;
+}
+#search-and-filter .container .filter-for-data {
+  margin-bottom: 20px;
+}
+#search-and-filter .container .filter-for-data .hidden {
+  display: none;
+}
+#search-and-filter .container .filter-for-data .visible {
+  display: block;
+}
+#search-and-filter .container .filter-for-data #jobFilterForm {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1568627451);
+  padding: 20px;
+}
+#search-and-filter .container .filter-for-data #jobFilterForm .category {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+#search-and-filter .container .filter-for-data #jobFilterForm .category select {
+  width: 90%;
+  min-height: 45px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.062745098);
+  border: 1px solid rgba(128, 128, 128, 0.185);
+}
+#search-and-filter .container .filter-for-data #jobFilterForm .category select option:hover {
+  background-color: #f0f2fd;
+}
+#search-and-filter .container .filter-for-data #jobFilterForm .skills {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-direction: column;
+}
+#search-and-filter .container .filter-for-data #jobFilterForm .skills select {
+  width: 90%;
+  min-height: 45px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.062745098);
+  border: 1px solid rgba(128, 128, 128, 0.185);
+}
+#search-and-filter .container .filter-for-data #jobFilterForm .region {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-direction: column;
+}
+#search-and-filter .container .filter-for-data #jobFilterForm .region select {
+  width: 90%;
+  min-height: 45px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.062745098);
+  border: 1px solid rgba(128, 128, 128, 0.185);
+}
+#search-and-filter .container .filter-for-data #jobFilterForm .workHours {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-direction: column;
+}
+#search-and-filter .container .filter-for-data #jobFilterForm .workHours select {
+  width: 90%;
+  min-height: 45px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.062745098);
+  border: 1px solid rgba(128, 128, 128, 0.185);
+}
+#search-and-filter .container .filter-for-data #jobFilterForm .education {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+#search-and-filter .container .filter-for-data #jobFilterForm .education select {
+  width: 90%;
+  min-height: 45px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.062745098);
+  border: 1px solid rgba(128, 128, 128, 0.185);
+}
+#search-and-filter .container .filter-for-data #jobFilterForm .experience {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#search-and-filter .container .filter-for-data #jobFilterForm .experience select {
+  width: 90%;
+  min-height: 45px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.062745098);
+  border: 1px solid rgba(128, 128, 128, 0.185);
+}
+#search-and-filter .container .filter-for-data #jobFilterForm .min-salary input {
+  width: 90%;
+  min-height: 45px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.062745098);
+  border: 1px solid rgba(128, 128, 128, 0.185);
+}
+#search-and-filter .container .filter-for-data #jobFilterForm .min-salary input::placeholder {
+  padding-left: 10px;
+}
+#search-and-filter .container .filter-for-data #jobFilterForm .max-salary input {
+  width: 90%;
+  min-height: 45px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.062745098);
+  border: 1px solid rgba(128, 128, 128, 0.185);
+}
+#search-and-filter .container .filter-for-data #jobFilterForm .max-salary input::placeholder {
+  padding-left: 10px;
+}
+#search-and-filter .container .filter-for-data #jobFilterForm .send-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+#search-and-filter .container .filter-for-data #jobFilterForm .send-btn button {
+  width: 90px;
+  min-height: 50px;
+  cursor: pointer;
+}
+
+#vacancies-cnt {
+  background-color: #f9f9f9;
+  min-height: 870px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#vacancies-cnt .sort-jobs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#vacancies-cnt .sort-jobs .sort-btn-cnt {
+  background-color: white;
+  width: 48%;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+#vacancies-cnt .sort-jobs .sort-btn-cnt button {
+  padding: 5px 20px 5px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+}
+#vacancies-cnt .all-vacancies-cnt {
+  background-color: white;
+  width: 100%;
+  min-height: 615px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1568627451);
+}
+#vacancies-cnt .all-vacancies-cnt .homeVacMain {
+  width: 100%;
+  padding: 0px;
+}
+#vacancies-cnt .all-vacancies-cnt .homeVacMain .homeVac {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+#vacancies-cnt .all-vacancies-cnt .homeVacMain .homeVac .more {
+  transition: 0.4s;
+}
+#vacancies-cnt .all-vacancies-cnt .homeVacMain .homeVac .more a {
+  border: none;
+  border-radius: 5px;
+  width: 90px;
+  min-height: 45px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  background-color: rgba(192, 192, 192, 0.1843137255);
+}
+#vacancies-cnt .all-vacancies-cnt .homeVacMain .homeVac:hover {
+  border-left: 3px solid #0014a7;
+  transition: 0.4s;
+}
+#vacancies-cnt .all-vacancies-cnt .homeVacMain .homeVac:hover a {
+  background-color: #0014a7;
+  color: white;
+  transition: 0.4s;
 }
 
 footer {
@@ -243,4 +523,411 @@ footer p {
   header .nav-bar .navbar-container .vacancy-create {
     display: none;
   }
+}
+#login-account {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 500px;
+}
+#login-account h1 {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 40px;
+  color: #333333;
+}
+#login-account h2 {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 27px;
+  color: #333333;
+}
+#login-account p a {
+  text-decoration: none;
+  transition: 0.4s;
+}
+#login-account p a:hover {
+  transition: 0.4s;
+  color: black;
+}
+#login-account .form-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#login-account .form-container #loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  gap: 10px;
+}
+#login-account .form-container #loginForm div {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid rgba(128, 128, 128, 0.239);
+}
+#login-account .form-container #loginForm div i {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+}
+#login-account .form-container #loginForm div input {
+  width: 90%;
+  height: 50px;
+  border: none;
+}
+#login-account .form-container #loginForm button {
+  width: 50%;
+  border: none;
+  border-radius: 5px;
+  background-color: #0014A7;
+  color: white;
+  height: 50px;
+}
+
+.jobFilterFormForAdvanced {
+  box-shadow: none !important;
+}
+
+#price-category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+#price-category .price-head-txt {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px 20px 0px;
+}
+#price-category .price-head-txt h1 {
+  font-weight: 900;
+}
+#price-category .price-crg-txt {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+#price-category .price-crg-txt h2 {
+  font-size: 25px;
+  width: 32%;
+  text-align: center;
+}
+#price-category .busy-18 {
+  width: 88%;
+}
+#price-category .busy-18 .busy-18-head {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #005ff9;
+  min-height: 180px;
+  padding-left: 20px;
+  color: white;
+  font-family: Montserrat, Arial, sans-serif;
+}
+#price-category .busy-18 .busy-18-head h3 {
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 600;
+}
+#price-category .busy-18 .busy-18-head h1 {
+  font-size: 42px;
+  line-height: 52px;
+  font-weight: 600;
+}
+#price-category .busy-18 .order {
+  background-color: #f0f0f0;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#price-category .busy-18 .order ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 10px;
+}
+#price-category .busy-18 .order ul li {
+  width: 94%;
+}
+#price-category .busy-18 .order button {
+  background-color: #005ff9;
+  color: white;
+  border: none;
+  width: 80%;
+  min-height: 40px;
+  font-size: 14px;
+}
+#price-category .busy-100 {
+  width: 88%;
+}
+#price-category .busy-100 .busy-100-head {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #005ff9;
+  min-height: 180px;
+  padding-left: 20px;
+  color: white;
+  font-family: Montserrat, Arial, sans-serif;
+}
+#price-category .busy-100 .busy-100-head h3 {
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 600;
+}
+#price-category .busy-100 .busy-100-head h1 {
+  font-size: 42px;
+  line-height: 52px;
+  font-weight: 600;
+}
+#price-category .busy-100 .order {
+  background-color: #f0f0f0;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#price-category .busy-100 .order ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 10px;
+}
+#price-category .busy-100 .order ul li {
+  width: 94%;
+}
+#price-category .busy-100 .order button {
+  background-color: #005ff9;
+  color: white;
+  border: none;
+  width: 80%;
+  min-height: 40px;
+  font-size: 14px;
+}
+#price-category .busy-450 {
+  width: 88%;
+}
+#price-category .busy-450 .busy-450-head {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #005ff9;
+  min-height: 180px;
+  padding-left: 20px;
+  color: white;
+  font-family: Montserrat, Arial, sans-serif;
+}
+#price-category .busy-450 .busy-450-head h3 {
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 600;
+}
+#price-category .busy-450 .busy-450-head h1 {
+  font-size: 42px;
+  line-height: 52px;
+  font-weight: 600;
+}
+#price-category .busy-450 .order {
+  background-color: #f0f0f0;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#price-category .busy-450 .order ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 10px;
+}
+#price-category .busy-450 .order ul li {
+  width: 94%;
+}
+#price-category .busy-450 .order button {
+  background-color: #005ff9;
+  color: white;
+  border: none;
+  width: 80%;
+  min-height: 40px;
+  font-size: 14px;
+}
+#price-category .busy-enterprise {
+  width: 88%;
+}
+#price-category .busy-enterprise .busy-enterprise-head {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #005ff9;
+  min-height: 180px;
+  padding-left: 20px;
+  color: white;
+  font-family: Montserrat, Arial, sans-serif;
+}
+#price-category .busy-enterprise .busy-enterprise-head h3 {
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 600;
+}
+#price-category .busy-enterprise .busy-enterprise-head h1 {
+  font-size: 42px;
+  line-height: 52px;
+  font-weight: 600;
+}
+#price-category .busy-enterprise .order {
+  background-color: #f0f0f0;
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#price-category .busy-enterprise .order ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 10px;
+}
+#price-category .busy-enterprise .order ul li {
+  width: 94%;
+}
+#price-category .busy-enterprise .order button {
+  background-color: #005ff9;
+  color: white;
+  border: none;
+  width: 80%;
+  min-height: 40px;
+  font-size: 14px;
+}
+#price-category .advice-for-features {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+}
+#price-category .advice-for-features h4 {
+  width: 45%;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+#price-category .advice-for-features h5 {
+  font-size: 20px;
+  width: 46%;
+  font-weight: 300;
+}
+#price-category .advice-for-features h5 p {
+  line-height: 31px;
+}
+
+.form-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 400px;
+}
+.form-container #registerForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  gap: 10px;
+}
+.form-container #registerForm div {
+  width: 50%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid rgba(128, 128, 128, 0.239);
+}
+.form-container #registerForm div i {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+}
+.form-container #registerForm div input {
+  width: 90%;
+  height: 50px;
+  border: none;
+}
+.form-container #registerForm div #acceptTerms {
+  width: 20px;
+}
+.form-container #registerForm .checkBox {
+  border: none;
+  gap: 10px;
+}
+.form-container #registerForm button {
+  width: 50%;
+  border: none;
+  border-radius: 5px;
+  background-color: #0014A7;
+  color: white;
+  height: 50px;
+}
+
+#addVacancies {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 400px;
+}
+#addVacancies h1 {
+  font-weight: 700;
+}
+#addVacancies #addVacForm {
+  width: 50%;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: 300px;
+}
+#addVacancies #addVacForm div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#addVacancies #addVacForm div input {
+  min-height: 50px;
+  width: 46%;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border: 1px solid rgba(128, 128, 128, 0.568);
+}
+#addVacancies #addVacForm button {
+  width: 100px;
+  min-height: 40px;
+  border: none;
+  background-color: rgb(13, 0, 255);
+  color: white;
+  border-radius: 5px;
 }
